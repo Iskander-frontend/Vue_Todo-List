@@ -37,9 +37,11 @@
                     title: this.title,
                     body: this.body
                 }
-                this.posts.unshift(newPost)
-                this.title = ""
-                this.body = ""
+                if (this.title.length > 0 && this.body.length > 0){
+                    this.posts.unshift(newPost)
+                    this.title = ""
+                    this.body = ""
+                }
 
             }
         }
